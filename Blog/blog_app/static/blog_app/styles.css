@@ -181,8 +181,8 @@ main {
     height: 100vh;
     overflow: hidden;
     background-color: #ffffff;
-    border: 1px solid;
 }
+
 #content-project h2 {
     color: #8F8F8F;
     position: relative;
@@ -221,9 +221,9 @@ main {
   .btn {
     position: absolute;
     bottom: -80px;
-    background: #ADADAD;
-    color: white;
-    border: none;
+    background: white;
+    color: 8F8F8F;
+    border: 1px solid #8F8F8F;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
