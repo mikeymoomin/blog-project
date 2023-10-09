@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikes Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog_app/projects.css' %}">
+  </head>
+
+<body>
+  <nav>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'blog_app:index' %}#first">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog_app:index' %}#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog_app:index' %}#projects-section">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog_app:index' %}#contact-me">Contact Me</a>
+        </li>
+      </ul>
+  </nav>
+
+<main>
+
+    <!-- 
+        1. Large image at the top (maybe an interactive one - see if possible or a screen record)
+        2. Project Title
+        3. List of icons related to the skills used in the project
+        4. Description of project and of skills that are utilised
+        5. link to project
+    -->
+<h1>Image will go here</h1>
+<br>
+<h1>Title will go here</h1>
+<br>
+<h2>List of icons</h2>
+<br>
+<h2>Desc of brief</h2>
+
+</main>
+</body>
+</html>

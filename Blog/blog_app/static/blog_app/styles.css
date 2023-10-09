@@ -1,0 +1,283 @@
+html{scroll-behavior:smooth}
+
+/* Nav Menu design */
+
+.nav-menu {
+    border: 1px solid;
+    border-color: grey;
+    padding-top: 20px;
+}
+
+.nav-content {
+    font-style: none;
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    padding-right: 50px;
+    gap: 30px;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-content li {
+    background-color: white;
+    color: #8F8F8F;
+    border-color: #8F8F8F;
+    border: 1px solid;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+.nav-content li:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 10px;
+}
+
+
+/* General Structure of page */
+main { 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Introduction design */
+.introduction {
+    background-color: white;
+}
+
+.intro-content { 
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'img narrative';
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    height: 100vh;
+    grid-template-rows: 0vh 100vh;
+}
+
+.intro-img {
+    grid-area: img;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.intro-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.into-narrative {
+    grid-area: narrative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 10%;
+    align-items: center;
+    text-align: left;
+}
+
+.intro-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.intro-button {
+    padding: 20px 30px 20px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #8F8F8F;
+    border: 1px solid;
+    border-color: #8F8F8F;
+}
+
+.intro-button:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid;
+}
+
+/* About me section */
+
+#about-me {
+    background-color: #f9f9f9;
+}
+
+.about-me-content {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'header header'
+    'boxer narrative';
+    padding: 30px;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+.about-header {
+    grid-area: header;
+}
+
+/* Boxer Things */
+
+.boxer-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: boxer;
+    padding: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+
+}
+
+#description {
+    grid-area: narrative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxer-img {
+    max-height: 55%;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.boxer-image-section {
+    height: 100%;   
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Projects section design */
+
+#content-project { 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid;
+}
+#content-project h2 {
+    color: #8F8F8F;
+    position: relative;
+    bottom: 10rem;
+}
+
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.7s;
+  }
+  
+  .image-container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  }
+  
+  .image-container span img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .btn-container {
+    position: relative;
+    width: 80%;
+  }
+  
+  .btn {
+    position: absolute;
+    bottom: -80px;
+    background: #ADADAD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #prev {
+    left: 20%;
+  }
+  
+  #next {
+    right: 20%;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.5);
+    color: black;
+    border: 1px solid;
+    border-color: black;
+  }
+
+/* Contact section design */
+
+#contact-me {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'cv contact';
+    padding: 10px;
+    margin: 5px;
+    grid-template-columns: 50% 50%;
+    background-color: #f9f9f9;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+}
+
+.cv-section {
+    border: 1px solid;
+    padding: 10px;
+    grid-area: cv;
+}
+
+.contact-narrative {
+    grid-area: contact;
+    border: 1px solid;
+    padding: 10px;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid;
+    text-align: center;
+}
+
+

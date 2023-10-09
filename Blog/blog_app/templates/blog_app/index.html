@@ -1,0 +1,155 @@
+{% load static %}
+
+<script>
+  let STATIC_URL = '{% static "" %}';
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikes Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog_app/styles.css' %}">
+  </head>
+
+<body>
+  <nav class="nav-menu">
+    <ul class="nav-content">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#first">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects-section">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-me">Contact Me</a>
+        </li>
+      </ul>
+  </nav>
+
+<main>
+  <!-- ### This is the introduction section ###-->
+  <section class="introduction">
+    <div class="intro-content">
+      <div class="intro-img">
+        <img src="{% static 'blog_app/images/linkedin-img.jpeg' %}" alt="photo of me">
+      </div>
+      <div class="into-narrative">
+        <h1>Hello! I'm Mike: A chartered accountant turned software developer.</h1>
+        <br>
+        <p>
+            I'm an ex-Big 4 ACA qualified chartered accountant and full stack developer with a focus on backend developing 
+            involving AI.
+        </p>
+        <br>
+        <div class="intro-btn">
+          <a href="#" class="intro-button">Github</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <!-- ### This is the about me section ###-->
+  <section id="about-me">
+      <div class="about-me-content">
+        <div class="about-header">
+          <h2>About Me</h2>
+        </div>
+
+        <!-- Interactive Boxer dog section -->
+          <div class="boxer-wrap" onmouseout="resetBoxer();">
+            <div class="boxer-image-section" onmouseover="handleImageHover(event)">
+              <img id="boxer-img" src="{% static 'blog_app/images/blank_boxer.png' %}" alt="My Boxer Dog">
+            </div>
+          </div>
+          <div id="description">
+            <!-- This should update on hover -->
+            <h3>Key Development Skills</h3>
+            <p><em>(Hover over elements of Brutus to see my key development stack!)</em></p>
+          </div>
+
+      </div>
+  </section>
+
+  <!-- ### This is the Projects section ###-->
+
+  <section id="projects-section">
+    <div id="content-project">
+      <h2>Projects</h2>
+    <div class="image-container">
+      <span style="--i: 1">
+        <a href="{% url 'blog_app:projects' %}"><img
+          src="https://www.aveton-gifford.co.uk/wp-content/uploads/2013/08/club-placeholder.jpg"
+        /></a>
+      </span>
+      <span style="--i: 2">
+        <img
+          src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 3">
+        <img
+          src="https://images.unsplash.com/photo-1581704906775-891dd5207444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJveXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 4">
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 5">
+        <img
+          src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 6">
+        <img
+          src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmFnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 7">
+        <img
+          src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+      <span style="--i: 8">
+        <img
+          src="https://images.unsplash.com/photo-1582142407894-ec85a1260a46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGdsYXNzZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+        />
+      </span>
+    </div>
+    <div class="btn-container">
+      <button class="btn" id="prev">Back</button>
+      <button class="btn" id="next">Next</button>
+    </div>
+  </div>
+  </section>
+  <br>
+
+  <!-- ### This is the contact section ###-->
+
+  <section id="contact-me">
+      <div class="header">
+        <h2>Contact Me</h2>
+      </div>
+      <div class="cv-section">
+        <p>CV placeholder</p>
+      </div>
+      <!--I'd like to open the cv in the browser and offer a pdf download-->
+      <div class="contact-narrative">
+      <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam et officiis debitis tenetur, alias modi quasi quod consequuntur molestiae voluptate esse, est sint! Eaque fugit explicabo delectus tenetur corporis. Ex.
+      </p>
+  </div>
+  </section>
+</main>
+<script src="{% static '/blog_app/main.js' %}"></script>
+</body>
+</html>
